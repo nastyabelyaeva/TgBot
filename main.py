@@ -1,8 +1,3 @@
-"""
-This is a echo bot.
-It echoes any incoming text messages.
-"""
-
 import logging
 from aiogram import Bot, Dispatcher, executor, types
 
@@ -23,7 +18,6 @@ async def send_welcome(message: types.Message):
     """
     await message.answer("Hi!\nDo you know\ndialogy tet-a-tet?")
     await message.answer_photo(types.input_file(''))
-
 
 @dp.message_handler(regexp='(^cat[s]?$|puss)')
 async def cats(message: types.Message):
